@@ -1,2 +1,20 @@
 build/
 build-qt/
+
+# Generated test and analysis output
+Testing/
+package-test/
+compile_commands.json
+
+# Local logs
+*.log
+
+# IDE user configuration
+.qtcreator/
+.vs/
+.idea/
+.vscode/c_cpp_properties.json
+*.user
+
+# User-specific CMake presets
+CMakeUserPresets.json
