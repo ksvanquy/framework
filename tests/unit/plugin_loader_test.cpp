@@ -6,6 +6,9 @@
 
 #include <filesystem>
 #include <iostream>
+#include <string>
+#include <utility>
+#include <vector>
 
 namespace {
 
@@ -55,6 +58,50 @@ TEST(PluginLoaderTest, RejectsIncompatibleAbiVersion) {
 
     ASSERT_FALSE(result);
     EXPECT_EQ(result.error().code(), framework::core::ErrorCode::PluginLoadFailed);
+}
+
+TEST(PluginLoaderTest, RejectsMissingRequiredExport) {
+    framework::runtime::PluginLoader loader;
+    const std::vector<std::pair<const char*, const char*>> fixtures{
+        {FRAMEWORK_MISSING_DESCRIPTOR_PLUGIN_PATH, "get_plugin_descriptor"},
+        {FRAMEWORK_MISSING_CREATE_PLUGIN_PATH, "create_plugin_module"},
+        {FRAMEWORK_MISSING_DESTROY_PLUGIN_PATH, "destroy_plugin_module"}};
+
+    for (const auto& [path, missingSymbol] : fixtures) {
+        const auto result = loader.load(path);
+
+        ASSERT_FALSE(result) << "Expected missing export: " << missingSymbol;
+        EXPECT_EQ(result.error().code(), framework::core::ErrorCode::PluginLoadFailed);
+        EXPECT_NE(result.error().message().find(missingSymbol), std::string::npos);
+    }
+}
+
+TEST(PluginLoaderTest, RejectsCreateReturningNull) {
+    framework::runtime::PluginLoader loader;
+
+    const auto result = loader.load(FRAMEWORK_NULL_MODULE_PLUGIN_PATH);
+
+    ASSERT_FALSE(result);
+    EXPECT_EQ(result.error().code(), framework::core::ErrorCode::PluginLoadFailed);
+    EXPECT_NE(result.error().message().find("Plugin module creation failed"), std::string::npos);
+}
+
+TEST(PluginLoaderTest, RejectsMalformedDescriptor) {
+    framework::runtime::PluginLoader loader;
+    const std::vector<const char*> fixtures{
+        FRAMEWORK_MALFORMED_NULL_DESCRIPTOR_PLUGIN_PATH,
+        FRAMEWORK_MALFORMED_EMPTY_ID_PLUGIN_PATH,
+        FRAMEWORK_MALFORMED_EMPTY_NAME_PLUGIN_PATH,
+        FRAMEWORK_MALFORMED_NULL_DEPENDENCIES_PLUGIN_PATH,
+        FRAMEWORK_MALFORMED_DUPLICATE_DEPENDENCIES_PLUGIN_PATH};
+
+    for (const auto* path : fixtures) {
+        const auto result = loader.load(path);
+
+        ASSERT_FALSE(result) << "Expected malformed descriptor: " << path;
+        EXPECT_EQ(result.error().code(), framework::core::ErrorCode::InvalidArgument);
+        EXPECT_NE(result.error().message().find("invalid"), std::string::npos);
+    }
 }
 
 TEST(PluginLoaderTest, RegistersLoadedPluginWithModuleManager) {

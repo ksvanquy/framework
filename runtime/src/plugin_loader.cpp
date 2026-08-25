@@ -95,8 +95,17 @@ core::Result<LoadedPlugin> PluginLoader::load(const std::filesystem::path& path)
     const auto descriptorFunction = reinterpret_cast<DescriptorFunction>(findSymbol(handle, "get_plugin_descriptor"));
     const auto createFunction = reinterpret_cast<CreateFunction>(findSymbol(handle, "create_plugin_module"));
     const auto destroyFunction = reinterpret_cast<DestroyFunction>(findSymbol(handle, "destroy_plugin_module"));
-    if (descriptorFunction == nullptr || createFunction == nullptr || destroyFunction == nullptr) {
-        return error(core::ErrorCode::PluginLoadFailed, "Plugin exports are incomplete: " + path.string());
+    if (descriptorFunction == nullptr) {
+        return error(core::ErrorCode::PluginLoadFailed,
+                     "Plugin export is missing: get_plugin_descriptor: " + path.string());
+    }
+    if (createFunction == nullptr) {
+        return error(core::ErrorCode::PluginLoadFailed,
+                     "Plugin export is missing: create_plugin_module: " + path.string());
+    }
+    if (destroyFunction == nullptr) {
+        return error(core::ErrorCode::PluginLoadFailed,
+                     "Plugin export is missing: destroy_plugin_module: " + path.string());
     }
 
     const PluginDescriptor* descriptor = descriptorFunction();

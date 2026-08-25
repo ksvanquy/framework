@@ -36,6 +36,9 @@ public:
 
     framework::core::Result<void> initialize() override {
         record("initialize");
+        if (failInitialize_) {
+            return framework::core::Error(ErrorCode::InternalError, "initialize failed");
+        }
         state_ = ModuleState::Initialized;
         return {};
     }
@@ -51,12 +54,17 @@ public:
 
     framework::core::Result<void> stop() override {
         record("stop");
+        if (failStop_) {
+            return framework::core::Error(ErrorCode::InternalError, "stop failed");
+        }
         state_ = ModuleState::Stopped;
         return {};
     }
 
     void setState(ModuleState state) { state_ = state; }
+    void failInitialize() { failInitialize_ = true; }
     void failStart() { failStart_ = true; }
+    void failStop() { failStop_ = true; }
 
 private:
     void record(const char* action) {
@@ -68,7 +76,9 @@ private:
     ModuleInfo info_;
     ModuleState state_ = ModuleState::Discovered;
     std::vector<std::string>* events_;
+    bool failInitialize_ = false;
     bool failStart_ = false;
+    bool failStop_ = false;
 };
 
 std::unique_ptr<TestModule> module(std::string id,
@@ -128,6 +138,40 @@ TEST(RuntimeTest, MissingDependencyIsRejected) {
 
     ASSERT_FALSE(result);
     EXPECT_EQ(result.error().code(), ErrorCode::NotFound);
+}
+
+TEST(RuntimeTest, SelfDependencyIsRejected) {
+    TestLogger logger;
+    ModuleManager manager(logger);
+    auto selfDependent = module("self", {"self"});
+    auto* selfDependentPointer = selfDependent.get();
+    ASSERT_TRUE(manager.registerModule(std::move(selfDependent)));
+
+    const auto result = manager.initializeAll();
+
+    ASSERT_FALSE(result);
+    EXPECT_EQ(result.error().code(), ErrorCode::StateError);
+    EXPECT_NE(result.error().message().find("self -> self"), std::string::npos);
+    EXPECT_EQ(selfDependentPointer->state(), ModuleState::Discovered);
+}
+
+TEST(RuntimeTest, IndependentModulesHaveDeterministicOrder) {
+    TestLogger logger;
+    ModuleManager manager(logger);
+    std::vector<std::string> events;
+
+    ASSERT_TRUE(manager.registerModule(module("charlie", {}, &events)));
+    ASSERT_TRUE(manager.registerModule(module("alpha", {}, &events)));
+    ASSERT_TRUE(manager.registerModule(module("bravo", {}, &events)));
+
+    ASSERT_TRUE(manager.initializeAll());
+    ASSERT_TRUE(manager.startAll());
+    ASSERT_TRUE(manager.stopAll());
+
+    EXPECT_EQ(events, (std::vector<std::string>{
+        "initialize:alpha", "initialize:bravo", "initialize:charlie",
+        "start:alpha", "start:bravo", "start:charlie",
+        "stop:charlie", "stop:bravo", "stop:alpha"}));
 }
 
 TEST(RuntimeTest, FailedStartRollsBackModulesAlreadyStarted) {
@@ -204,6 +248,51 @@ TEST(RuntimeTest, RuntimeCanRestartAfterStop) {
     ASSERT_TRUE(runtime.initialize());
     ASSERT_TRUE(runtime.start());
     EXPECT_TRUE(runtime.stop());
+}
+
+TEST(RuntimeTest, InitializeFailureLeavesKnownStates) {
+    TestLogger logger;
+    ModuleManager manager(logger);
+    auto successful = module("a-successful");
+    auto* successfulPointer = successful.get();
+    auto failing = module("b-failing");
+    auto* failingPointer = failing.get();
+    failing->failInitialize();
+
+    ASSERT_TRUE(manager.registerModule(std::move(failing)));
+    ASSERT_TRUE(manager.registerModule(std::move(successful)));
+
+    const auto result = manager.initializeAll();
+
+    ASSERT_FALSE(result);
+    EXPECT_EQ(result.error().code(), ErrorCode::InternalError);
+    EXPECT_EQ(successfulPointer->state(), ModuleState::Initialized);
+    EXPECT_EQ(failingPointer->state(), ModuleState::Discovered);
+}
+
+TEST(RuntimeTest, StopFailureStillStopsRemainingModules) {
+    TestLogger logger;
+    ModuleManager manager(logger);
+    std::vector<std::string> events;
+    auto dependency = module("a-dependency", {}, &events);
+    auto* dependencyPointer = dependency.get();
+    auto dependent = module("b-dependent", {"a-dependency"}, &events);
+    auto* dependentPointer = dependent.get();
+    dependent->failStop();
+
+    ASSERT_TRUE(manager.registerModule(std::move(dependent)));
+    ASSERT_TRUE(manager.registerModule(std::move(dependency)));
+    ASSERT_TRUE(manager.initializeAll());
+    ASSERT_TRUE(manager.startAll());
+    events.clear();
+
+    const auto result = manager.stopAll();
+
+    ASSERT_FALSE(result);
+    EXPECT_EQ(result.error().code(), ErrorCode::InternalError);
+    EXPECT_EQ(events, (std::vector<std::string>{"stop:b-dependent", "stop:a-dependency"}));
+    EXPECT_EQ(dependentPointer->state(), ModuleState::Started);
+    EXPECT_EQ(dependencyPointer->state(), ModuleState::Stopped);
 }
 
 TEST(RuntimeTest, RuntimeContextProvidesNonOwningRuntimeServices) {

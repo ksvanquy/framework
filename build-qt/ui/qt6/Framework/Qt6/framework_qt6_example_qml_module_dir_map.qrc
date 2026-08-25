@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/">
-    <file alias="/qt/qml/Framework/Qt6">D:/DEV/framework/build-qt/ui/qt6/Framework/Qt6</file>
-
-  </qresource>
-</RCC>

@@ -46,7 +46,13 @@ endif()
 set(FRAMEWORK_COMPILE_TARGETS framework_services framework_runtime framework_example_module)
 if(BUILD_PLUGINS OR BUILD_TESTING)
 	list(APPEND FRAMEWORK_COMPILE_TARGETS framework_example_plugin
-		framework_invalid_api_plugin framework_invalid_abi_plugin)
+		framework_invalid_api_plugin framework_invalid_abi_plugin
+		framework_missing_descriptor_plugin framework_missing_create_plugin
+		framework_missing_destroy_plugin framework_null_module_plugin)
+	list(APPEND FRAMEWORK_COMPILE_TARGETS framework_malformed_null_descriptor_plugin
+		framework_malformed_empty_id_plugin framework_malformed_empty_name_plugin
+		framework_malformed_null_dependencies_plugin
+		framework_malformed_duplicate_dependencies_plugin)
 endif()
 if(BUILD_EXAMPLES)
 	list(APPEND FRAMEWORK_COMPILE_TARGETS framework_runtime_example)

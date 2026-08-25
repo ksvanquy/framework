@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/qt/qml/Framework/Qt6">
-    <file alias="qmldir">D:/DEV/framework/build-qt/ui/qt6/Framework/Qt6/qmldir</file>
-  </qresource>
-</RCC>
-
