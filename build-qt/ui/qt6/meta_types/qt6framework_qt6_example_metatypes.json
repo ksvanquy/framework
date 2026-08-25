@@ -1,0 +1,83 @@
+[
+    {
+        "classes": [
+            {
+                "classInfos": [
+                    {
+                        "name": "QML.Element",
+                        "value": "auto"
+                    }
+                ],
+                "className": "RuntimeBridge",
+                "lineNumber": 10,
+                "methods": [
+                    {
+                        "access": "public",
+                        "index": 2,
+                        "lineNumber": 21,
+                        "name": "start",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 3,
+                        "lineNumber": 22,
+                        "name": "stop",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "lineNumber": 13,
+                        "name": "state",
+                        "notify": "stateChanged",
+                        "override": false,
+                        "read": "state",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false,
+                        "virtual": false
+                    }
+                ],
+                "qualifiedClassName": "framework::ui::RuntimeBridge",
+                "signals": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "lineNumber": 25,
+                        "name": "stateChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 1,
+                        "lineNumber": 26,
+                        "name": "errorOccurred",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "runtime_bridge.h",
+        "outputRevision": 69
+    }
+]

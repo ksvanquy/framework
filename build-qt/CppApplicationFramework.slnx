@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Solution>
+	<Configurations>
+		<BuildType Name="Debug"/>
+		<BuildType Name="Release"/>
+		<BuildType Name="MinSizeRel"/>
+		<BuildType Name="RelWithDebInfo"/>
+		<Platform Name="x64"/>
+	</Configurations>
+	<Project Path="all_aotstats.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="78d8bce7-8213-3551-b4ae-b98f50680a68">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+		<BuildDependency Project="module_framework_qt6_example_aotstats_target.vcxproj"/>
+		<Build Solution="Debug|*" Project="false"/>
+		<Build Solution="Release|*" Project="false"/>
+		<Build Solution="MinSizeRel|*" Project="false"/>
+		<Build Solution="RelWithDebInfo|*" Project="false"/>
+	</Project>
+	<Project Path="ui/qt6/clean_qml_context_properties.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="215bd142-acd4-3d13-9d18-8de480d47230">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+		<Build Solution="Debug|*" Project="false"/>
+		<Build Solution="Release|*" Project="false"/>
+		<Build Solution="MinSizeRel|*" Project="false"/>
+		<Build Solution="RelWithDebInfo|*" Project="false"/>
+	</Project>
+	<Project Path="ui/qt6/dump_qml_context_properties.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="9c44abbd-cd92-3532-8d74-be77f08cdee8">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+		<Build Solution="Debug|*" Project="false"/>
+		<Build Solution="Release|*" Project="false"/>
+		<Build Solution="MinSizeRel|*" Project="false"/>
+		<Build Solution="RelWithDebInfo|*" Project="false"/>
+	</Project>
+	<Project Path="modules/example_module/framework_example_module.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="a3a17497-2388-3582-b84a-0136bc529428">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+		<BuildDependency Project="runtime/framework_runtime.vcxproj"/>
+		<BuildDependency Project="services/framework_services.vcxproj"/>
+	</Project>
+	<Project Path="ui/qt6/framework_qt6_example.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="be56c609-ef13-3664-9013-d40b0b4a93e1">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+		<BuildDependency Project="modules/example_module/framework_example_module.vcxproj"/>
+		<BuildDependency Project="ui/qt6/framework_qt6_example_autogen.vcxproj"/>
+		<BuildDependency Project="ui/qt6/framework_qt6_example_autogen_timestamp_deps.vcxproj"/>
+		<BuildDependency Project="ui/qt6/framework_qt6_example_copy_qml.vcxproj"/>
+		<BuildDependency Project="ui/qt6/framework_qt6_example_copy_res.vcxproj"/>
+		<BuildDependency Project="ui/qt6/framework_qt6_example_qmlimportscan.vcxproj"/>
+		<BuildDependency Project="runtime/framework_runtime.vcxproj"/>
+		<BuildDependency Project="services/framework_services.vcxproj"/>
+		<BuildDependency Project="generate_qmlls_build_ini_file.vcxproj"/>
+	</Project>
+	<Project Path="runtime/framework_runtime.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="e4d13f3f-f52e-34a3-a33b-34446370de08">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+		<BuildDependency Project="services/framework_services.vcxproj"/>
+	</Project>
+	<Project Path="services/framework_services.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="5edb70e0-5770-3131-a2bb-923bb59ad410">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="generate_qmlls_build_ini_file.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="2d88a6f8-edf6-3109-bec6-7a65c4d263f9">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Folder Name="/CMakePredefinedTargets/">
+		<Project Path="ALL_BUILD.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="01cda87d-ef58-340e-a71a-11b9ab2e0b63" DefaultStartup="true">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="modules/example_module/framework_example_module.vcxproj"/>
+			<BuildDependency Project="ui/qt6/framework_qt6_example.vcxproj"/>
+			<BuildDependency Project="runtime/framework_runtime.vcxproj"/>
+			<BuildDependency Project="services/framework_services.vcxproj"/>
+		</Project>
+		<Project Path="INSTALL.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="da3764d8-f08c-300c-a7e1-cef7aa9c4f3e">
+			<BuildDependency Project="ALL_BUILD.vcxproj"/>
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<Build Solution="Debug|*" Project="false"/>
+			<Build Solution="Release|*" Project="false"/>
+			<Build Solution="MinSizeRel|*" Project="false"/>
+			<Build Solution="RelWithDebInfo|*" Project="false"/>
+		</Project>
+		<Project Path="ZERO_CHECK.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="c7dfaa08-60f0-300c-907a-c74886116555"/>
+	</Folder>
+	<Folder Name="/QtInternalTargets/">
+		<Project Path="ui/qt6/all_qmltyperegistrations.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="93b1649f-384b-3460-89b3-12bd601075e3">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="ui/qt6/framework_qt6_example_qmltyperegistration.vcxproj"/>
+		</Project>
+		<Project Path="ui/qt6/framework_qt6_example_autogen.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="ae85efca-7177-3170-85d2-5b96bcd5e4fc">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="ui/qt6/framework_qt6_example_autogen_timestamp_deps.vcxproj"/>
+		</Project>
+		<Project Path="ui/qt6/framework_qt6_example_autogen_timestamp_deps.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="f7b93b7c-a937-3346-ba3b-e3151830540a">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="modules/example_module/framework_example_module.vcxproj"/>
+			<BuildDependency Project="ui/qt6/framework_qt6_example_copy_qml.vcxproj"/>
+			<BuildDependency Project="ui/qt6/framework_qt6_example_copy_res.vcxproj"/>
+			<BuildDependency Project="ui/qt6/framework_qt6_example_qmlimportscan.vcxproj"/>
+			<BuildDependency Project="runtime/framework_runtime.vcxproj"/>
+			<BuildDependency Project="generate_qmlls_build_ini_file.vcxproj"/>
+		</Project>
+		<Project Path="ui/qt6/framework_qt6_example_copy_qml.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="532650e4-0b26-39f1-a503-9f1d40563b29">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+		</Project>
+		<Project Path="ui/qt6/framework_qt6_example_copy_res.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="52589ba9-8676-3069-aefd-f123ffd987a0">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+		</Project>
+		<Project Path="ui/qt6/framework_qt6_example_qmlimportscan.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="d8106b2b-b948-320b-bae1-7550aefc74a6">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+		</Project>
+		<Project Path="ui/qt6/framework_qt6_example_qmltyperegistration.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="1a8b6755-9c57-3d51-b14d-14be065de0f1">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="ui/qt6/framework_qt6_example_autogen_timestamp_deps.vcxproj"/>
+		</Project>
+		<Project Path="module_framework_qt6_example_aotstats_target.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="1736af86-8c03-3801-a7a0-f2fbef484203">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="ui/qt6/framework_qt6_example_qmltyperegistration.vcxproj"/>
+		</Project>
+	</Folder>
+	<Folder Name="/QtInternalTargets/QmlLinter/">
+		<Project Path="all_qmllint.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="a6505fd7-cd9e-3da3-8892-9a572d672bf9">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<Build Solution="Debug|*" Project="false"/>
+			<Build Solution="Release|*" Project="false"/>
+			<Build Solution="MinSizeRel|*" Project="false"/>
+			<Build Solution="RelWithDebInfo|*" Project="false"/>
+		</Project>
+		<Project Path="all_qmllint_json.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="5a4a6f55-1c3b-3e69-93ef-afc503688a1e">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<Build Solution="Debug|*" Project="false"/>
+			<Build Solution="Release|*" Project="false"/>
+			<Build Solution="MinSizeRel|*" Project="false"/>
+			<Build Solution="RelWithDebInfo|*" Project="false"/>
+		</Project>
+		<Project Path="all_qmllint_module.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="077900d2-f6ab-369b-bc50-88646283e1ad">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<Build Solution="Debug|*" Project="false"/>
+			<Build Solution="Release|*" Project="false"/>
+			<Build Solution="MinSizeRel|*" Project="false"/>
+			<Build Solution="RelWithDebInfo|*" Project="false"/>
+		</Project>
+		<Project Path="ui/qt6/framework_qt6_example_qmllint.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="cc2e0ac4-52d3-3698-a3fb-42f3d6a93c34">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="ui/qt6/all_qmltyperegistrations.vcxproj"/>
+			<Build Solution="Debug|*" Project="false"/>
+			<Build Solution="Release|*" Project="false"/>
+			<Build Solution="MinSizeRel|*" Project="false"/>
+			<Build Solution="RelWithDebInfo|*" Project="false"/>
+		</Project>
+		<Project Path="ui/qt6/framework_qt6_example_qmllint_json.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="c59ad27f-ac66-3dff-8a35-8dcc34031af1">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="ui/qt6/all_qmltyperegistrations.vcxproj"/>
+			<Build Solution="Debug|*" Project="false"/>
+			<Build Solution="Release|*" Project="false"/>
+			<Build Solution="MinSizeRel|*" Project="false"/>
+			<Build Solution="RelWithDebInfo|*" Project="false"/>
+		</Project>
+		<Project Path="ui/qt6/framework_qt6_example_qmllint_module.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="9db20188-167b-30b5-9435-2ee45a71ce9a">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="ui/qt6/all_qmltyperegistrations.vcxproj"/>
+			<Build Solution="Debug|*" Project="false"/>
+			<Build Solution="Release|*" Project="false"/>
+			<Build Solution="MinSizeRel|*" Project="false"/>
+			<Build Solution="RelWithDebInfo|*" Project="false"/>
+		</Project>
+	</Folder>
+</Solution>

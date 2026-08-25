@@ -1,0 +1,18 @@
+{
+	"InstallScripts" : 
+	[
+		"D:/DEV/framework/build/cmake_install.cmake",
+		"D:/DEV/framework/build/core/cmake_install.cmake",
+		"D:/DEV/framework/build/services/cmake_install.cmake",
+		"D:/DEV/framework/build/runtime/cmake_install.cmake",
+		"D:/DEV/framework/build/modules/example_module/cmake_install.cmake",
+		"D:/DEV/framework/build/plugins/example_plugin/cmake_install.cmake",
+		"D:/DEV/framework/build/examples/runtime_example/cmake_install.cmake",
+		"D:/DEV/framework/build/examples/miniapp/cmake_install.cmake",
+		"D:/DEV/framework/build/tests/cmake_install.cmake",
+		"D:/DEV/framework/build/_deps/googletest-build/cmake_install.cmake",
+		"D:/DEV/framework/build/_deps/googletest-build/googlemock/cmake_install.cmake",
+		"D:/DEV/framework/build/_deps/googletest-build/googletest/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

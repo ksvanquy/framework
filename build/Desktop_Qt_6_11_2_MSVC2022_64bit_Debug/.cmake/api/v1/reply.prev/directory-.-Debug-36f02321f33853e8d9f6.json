@@ -1,0 +1,214 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 76,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 82,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 83,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 84,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 85,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 88,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 103,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"services/framework_services.lib"
+			],
+			"targetId" : "framework_services::@de3833460954761dd5df",
+			"targetIndex" : 35,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"runtime/framework_runtime.lib"
+			],
+			"targetId" : "framework_runtime::@dcf6d6b3a78d87189fa9",
+			"targetIndex" : 33,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"modules/example_module/framework_example_module.lib"
+			],
+			"targetId" : "framework_example_module::@5227e4175305f7967ae9",
+			"targetIndex" : 29,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				{
+					"from" : "core/include",
+					"to" : "."
+				}
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				{
+					"from" : "services/include",
+					"to" : "."
+				}
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				{
+					"from" : "runtime/include",
+					"to" : "."
+				}
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"plugins/plugin_sdk/plugin_api.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 6,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				{
+					"from" : "modules/example_module/include",
+					"to" : "."
+				}
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 7,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/Framework",
+			"exportName" : "FrameworkTargets",
+			"exportTargets" : 
+			[
+				{
+					"id" : "framework_core::@57760688d1f824db5d9c",
+					"index" : 0
+				},
+				{
+					"id" : "framework_services::@de3833460954761dd5df",
+					"index" : 35
+				},
+				{
+					"id" : "framework_runtime::@dcf6d6b3a78d87189fa9",
+					"index" : 33
+				},
+				{
+					"id" : "framework_example_module::@5227e4175305f7967ae9",
+					"index" : 29
+				}
+			],
+			"paths" : 
+			[
+				"CMakeFiles/Export/68bdda61fcb3032124ba92e4ae4d4bc5/FrameworkTargets.cmake"
+			],
+			"type" : "export"
+		},
+		{
+			"backtrace" : 8,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/Framework",
+			"paths" : 
+			[
+				"build/Desktop_Qt_6_11_2_MSVC2022_64bit_Debug/FrameworkConfig.cmake",
+				"build/Desktop_Qt_6_11_2_MSVC2022_64bit_Debug/FrameworkConfigVersion.cmake"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	}
+}

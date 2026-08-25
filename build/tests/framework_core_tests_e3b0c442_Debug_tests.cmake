@@ -1,0 +1,289 @@
+add_test([=[ErrorTest.PreservesCodeAndMessage]=]  D:/DEV/framework/build/tests/Debug/framework_core_tests.exe [==[--gtest_filter=ErrorTest.PreservesCodeAndMessage]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[ErrorTest.PreservesCodeAndMessage]=]
+  PROPERTIES
+    
+    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\unit\error_test.cpp:9]==]
+    WORKING_DIRECTORY [==[D:/DEV/framework/build/tests]==]
+    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
+    
+)
+add_test([=[ErrorTest.CapturesSourceLocation]=]  D:/DEV/framework/build/tests/Debug/framework_core_tests.exe [==[--gtest_filter=ErrorTest.CapturesSourceLocation]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[ErrorTest.CapturesSourceLocation]=]
+  PROPERTIES
+    
+    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\unit\error_test.cpp:17]==]
+    WORKING_DIRECTORY [==[D:/DEV/framework/build/tests]==]
+    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
+    
+)
+add_test([=[ResultTest.StoresValue]=]  D:/DEV/framework/build/tests/Debug/framework_core_tests.exe [==[--gtest_filter=ResultTest.StoresValue]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[ResultTest.StoresValue]=]
+  PROPERTIES
+    
+    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\unit\result_test.cpp:9]==]
+    WORKING_DIRECTORY [==[D:/DEV/framework/build/tests]==]
+    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
+    
+)
+add_test([=[ResultTest.StoresError]=]  D:/DEV/framework/build/tests/Debug/framework_core_tests.exe [==[--gtest_filter=ResultTest.StoresError]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[ResultTest.StoresError]=]
+  PROPERTIES
+    
+    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\unit\result_test.cpp:17]==]
+    WORKING_DIRECTORY [==[D:/DEV/framework/build/tests]==]
+    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
+    
+)
+add_test([=[ResultTest.SupportsMoveOnlyValue]=]  D:/DEV/framework/build/tests/Debug/framework_core_tests.exe [==[--gtest_filter=ResultTest.SupportsMoveOnlyValue]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[ResultTest.SupportsMoveOnlyValue]=]
+  PROPERTIES
+    
+    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\unit\result_test.cpp:26]==]
+    WORKING_DIRECTORY [==[D:/DEV/framework/build/tests]==]
+    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
+    
+)
+add_test([=[ResultTest.VoidSuccessHasNoError]=]  D:/DEV/framework/build/tests/Debug/framework_core_tests.exe [==[--gtest_filter=ResultTest.VoidSuccessHasNoError]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[ResultTest.VoidSuccessHasNoError]=]
+  PROPERTIES
+    
+    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\unit\result_test.cpp:33]==]
+    WORKING_DIRECTORY [==[D:/DEV/framework/build/tests]==]
+    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
+    
+)
+add_test([=[ResultTest.VoidFailureStoresError]=]  D:/DEV/framework/build/tests/Debug/framework_core_tests.exe [==[--gtest_filter=ResultTest.VoidFailureStoresError]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[ResultTest.VoidFailureStoresError]=]
+  PROPERTIES
+    
+    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\unit\result_test.cpp:40]==]
+    WORKING_DIRECTORY [==[D:/DEV/framework/build/tests]==]
+    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
+    
+)
+add_test([=[RuntimeTest.ModuleWithoutDependenciesCanInitializeAndStart]=]  D:/DEV/framework/build/tests/Debug/framework_core_tests.exe [==[--gtest_filter=RuntimeTest.ModuleWithoutDependenciesCanInitializeAndStart]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[RuntimeTest.ModuleWithoutDependenciesCanInitializeAndStart]=]
+  PROPERTIES
+    
+    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\unit\runtime_test.cpp:80]==]
+    WORKING_DIRECTORY [==[D:/DEV/framework/build/tests]==]
+    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
+    
+)
+add_test([=[RuntimeTest.DependenciesInitializeAndStartBeforeDependent]=]  D:/DEV/framework/build/tests/Debug/framework_core_tests.exe [==[--gtest_filter=RuntimeTest.DependenciesInitializeAndStartBeforeDependent]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[RuntimeTest.DependenciesInitializeAndStartBeforeDependent]=]
+  PROPERTIES
+    
+    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\unit\runtime_test.cpp:93]==]
+    WORKING_DIRECTORY [==[D:/DEV/framework/build/tests]==]
+    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
+    
+)
+add_test([=[RuntimeTest.CircularDependencyIsRejected]=]  D:/DEV/framework/build/tests/Debug/framework_core_tests.exe [==[--gtest_filter=RuntimeTest.CircularDependencyIsRejected]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[RuntimeTest.CircularDependencyIsRejected]=]
+  PROPERTIES
+    
+    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\unit\runtime_test.cpp:108]==]
+    WORKING_DIRECTORY [==[D:/DEV/framework/build/tests]==]
+    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
+    
+)
+add_test([=[RuntimeTest.MissingDependencyIsRejected]=]  D:/DEV/framework/build/tests/Debug/framework_core_tests.exe [==[--gtest_filter=RuntimeTest.MissingDependencyIsRejected]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[RuntimeTest.MissingDependencyIsRejected]=]
+  PROPERTIES
+    
+    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\unit\runtime_test.cpp:122]==]
+    WORKING_DIRECTORY [==[D:/DEV/framework/build/tests]==]
+    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
+    
+)
+add_test([=[RuntimeTest.FailedStartRollsBackModulesAlreadyStarted]=]  D:/DEV/framework/build/tests/Debug/framework_core_tests.exe [==[--gtest_filter=RuntimeTest.FailedStartRollsBackModulesAlreadyStarted]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[RuntimeTest.FailedStartRollsBackModulesAlreadyStarted]=]
+  PROPERTIES
+    
+    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\unit\runtime_test.cpp:133]==]
+    WORKING_DIRECTORY [==[D:/DEV/framework/build/tests]==]
+    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
+    
+)
+add_test([=[RuntimeTest.StopUsesReverseDependencyOrder]=]  D:/DEV/framework/build/tests/Debug/framework_core_tests.exe [==[--gtest_filter=RuntimeTest.StopUsesReverseDependencyOrder]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[RuntimeTest.StopUsesReverseDependencyOrder]=]
+  PROPERTIES
+    
+    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\unit\runtime_test.cpp:157]==]
+    WORKING_DIRECTORY [==[D:/DEV/framework/build/tests]==]
+    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
+    
+)
+add_test([=[RuntimeTest.InvalidLifecycleStateIsRejected]=]  D:/DEV/framework/build/tests/Debug/framework_core_tests.exe [==[--gtest_filter=RuntimeTest.InvalidLifecycleStateIsRejected]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[RuntimeTest.InvalidLifecycleStateIsRejected]=]
+  PROPERTIES
+    
+    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\unit\runtime_test.cpp:172]==]
+    WORKING_DIRECTORY [==[D:/DEV/framework/build/tests]==]
+    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
+    
+)
+add_test([=[RuntimeTest.LifecycleTransitionContractAcceptsOnlyValidStates]=]  D:/DEV/framework/build/tests/Debug/framework_core_tests.exe [==[--gtest_filter=RuntimeTest.LifecycleTransitionContractAcceptsOnlyValidStates]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[RuntimeTest.LifecycleTransitionContractAcceptsOnlyValidStates]=]
+  PROPERTIES
+    
+    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\unit\runtime_test.cpp:184]==]
+    WORKING_DIRECTORY [==[D:/DEV/framework/build/tests]==]
+    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
+    
+)
+add_test([=[RuntimeTest.RuntimeContextProvidesNonOwningRuntimeServices]=]  D:/DEV/framework/build/tests/Debug/framework_core_tests.exe [==[--gtest_filter=RuntimeTest.RuntimeContextProvidesNonOwningRuntimeServices]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[RuntimeTest.RuntimeContextProvidesNonOwningRuntimeServices]=]
+  PROPERTIES
+    
+    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\unit\runtime_test.cpp:195]==]
+    WORKING_DIRECTORY [==[D:/DEV/framework/build/tests]==]
+    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
+    
+)
+add_test([=[RuntimeTest.DuplicateModuleIdIsRejected]=]  D:/DEV/framework/build/tests/Debug/framework_core_tests.exe [==[--gtest_filter=RuntimeTest.DuplicateModuleIdIsRejected]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[RuntimeTest.DuplicateModuleIdIsRejected]=]
+  PROPERTIES
+    
+    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\unit\runtime_test.cpp:207]==]
+    WORKING_DIRECTORY [==[D:/DEV/framework/build/tests]==]
+    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
+    
+)
+add_test([=[RuntimeTest.ExampleModuleFollowsCompleteLifecycle]=]  D:/DEV/framework/build/tests/Debug/framework_core_tests.exe [==[--gtest_filter=RuntimeTest.ExampleModuleFollowsCompleteLifecycle]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[RuntimeTest.ExampleModuleFollowsCompleteLifecycle]=]
+  PROPERTIES
+    
+    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\unit\runtime_test.cpp:218]==]
+    WORKING_DIRECTORY [==[D:/DEV/framework/build/tests]==]
+    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
+    
+)
+add_test([=[RuntimeTest.ExampleModuleUsesLoggerAndEventBusServices]=]  D:/DEV/framework/build/tests/Debug/framework_core_tests.exe [==[--gtest_filter=RuntimeTest.ExampleModuleUsesLoggerAndEventBusServices]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[RuntimeTest.ExampleModuleUsesLoggerAndEventBusServices]=]
+  PROPERTIES
+    
+    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\unit\runtime_test.cpp:235]==]
+    WORKING_DIRECTORY [==[D:/DEV/framework/build/tests]==]
+    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
+    
+)
+add_test([=[PluginLoaderTest.LoadsValidPluginAndOwnsModuleLifetime]=]  D:/DEV/framework/build/tests/Debug/framework_core_tests.exe [==[--gtest_filter=PluginLoaderTest.LoadsValidPluginAndOwnsModuleLifetime]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[PluginLoaderTest.LoadsValidPluginAndOwnsModuleLifetime]=]
+  PROPERTIES
+    
+    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\unit\plugin_loader_test.cpp:12]==]
+    WORKING_DIRECTORY [==[D:/DEV/framework/build/tests]==]
+    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
+    
+)
+add_test([=[PluginLoaderTest.RejectsMissingPlugin]=]  D:/DEV/framework/build/tests/Debug/framework_core_tests.exe [==[--gtest_filter=PluginLoaderTest.RejectsMissingPlugin]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[PluginLoaderTest.RejectsMissingPlugin]=]
+  PROPERTIES
+    
+    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\unit\plugin_loader_test.cpp:33]==]
+    WORKING_DIRECTORY [==[D:/DEV/framework/build/tests]==]
+    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
+    
+)
+add_test([=[PluginLoaderTest.RejectsIncompatibleApiVersion]=]  D:/DEV/framework/build/tests/Debug/framework_core_tests.exe [==[--gtest_filter=PluginLoaderTest.RejectsIncompatibleApiVersion]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[PluginLoaderTest.RejectsIncompatibleApiVersion]=]
+  PROPERTIES
+    
+    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\unit\plugin_loader_test.cpp:42]==]
+    WORKING_DIRECTORY [==[D:/DEV/framework/build/tests]==]
+    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
+    
+)
+add_test([=[PluginLoaderTest.RejectsIncompatibleAbiVersion]=]  D:/DEV/framework/build/tests/Debug/framework_core_tests.exe [==[--gtest_filter=PluginLoaderTest.RejectsIncompatibleAbiVersion]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[PluginLoaderTest.RejectsIncompatibleAbiVersion]=]
+  PROPERTIES
+    
+    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\unit\plugin_loader_test.cpp:51]==]
+    WORKING_DIRECTORY [==[D:/DEV/framework/build/tests]==]
+    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
+    
+)
+add_test([=[PluginLoaderTest.RegistersLoadedPluginWithModuleManager]=]  D:/DEV/framework/build/tests/Debug/framework_core_tests.exe [==[--gtest_filter=PluginLoaderTest.RegistersLoadedPluginWithModuleManager]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[PluginLoaderTest.RegistersLoadedPluginWithModuleManager]=]
+  PROPERTIES
+    
+    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\unit\plugin_loader_test.cpp:60]==]
+    WORKING_DIRECTORY [==[D:/DEV/framework/build/tests]==]
+    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
+    
+)
+add_test([=[PluginLoaderTest.UnloadsPluginAfterStoppingItsModule]=]  D:/DEV/framework/build/tests/Debug/framework_core_tests.exe [==[--gtest_filter=PluginLoaderTest.UnloadsPluginAfterStoppingItsModule]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[PluginLoaderTest.UnloadsPluginAfterStoppingItsModule]=]
+  PROPERTIES
+    
+    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\unit\plugin_loader_test.cpp:79]==]
+    WORKING_DIRECTORY [==[D:/DEV/framework/build/tests]==]
+    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
+    
+)
+add_test([=[CoreIntegrationTest.PublicTypesComposeWithoutUpperLayers]=]  D:/DEV/framework/build/tests/Debug/framework_core_tests.exe [==[--gtest_filter=CoreIntegrationTest.PublicTypesComposeWithoutUpperLayers]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[CoreIntegrationTest.PublicTypesComposeWithoutUpperLayers]=]
+  PROPERTIES
+    
+    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\integration\core_headers_test.cpp:9]==]
+    WORKING_DIRECTORY [==[D:/DEV/framework/build/tests]==]
+    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
+    
+)
+add_test([=[LifetimeIntegrationTest.EventSubscriptionIsRemovedWhenModuleIsDestroyed]=]  D:/DEV/framework/build/tests/Debug/framework_core_tests.exe [==[--gtest_filter=LifetimeIntegrationTest.EventSubscriptionIsRemovedWhenModuleIsDestroyed]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[LifetimeIntegrationTest.EventSubscriptionIsRemovedWhenModuleIsDestroyed]=]
+  PROPERTIES
+    
+    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\integration\lifetime_test.cpp:58]==]
+    WORKING_DIRECTORY [==[D:/DEV/framework/build/tests]==]
+    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
+    
+)
+add_test([=[LifetimeIntegrationTest.RuntimeStopUnloadsRegisteredPlugin]=]  D:/DEV/framework/build/tests/Debug/framework_core_tests.exe [==[--gtest_filter=LifetimeIntegrationTest.RuntimeStopUnloadsRegisteredPlugin]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[LifetimeIntegrationTest.RuntimeStopUnloadsRegisteredPlugin]=]
+  PROPERTIES
+    
+    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\integration\lifetime_test.cpp:76]==]
+    WORKING_DIRECTORY [==[D:/DEV/framework/build/tests]==]
+    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
+    
+)
+add_test([=[ApplicationIntegrationTest.RunsAndReturnsApplicationExitCode]=]  D:/DEV/framework/build/tests/Debug/framework_core_tests.exe [==[--gtest_filter=ApplicationIntegrationTest.RunsAndReturnsApplicationExitCode]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[ApplicationIntegrationTest.RunsAndReturnsApplicationExitCode]=]
+  PROPERTIES
+    
+    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\integration\application_test.cpp:24]==]
+    WORKING_DIRECTORY [==[D:/DEV/framework/build/tests]==]
+    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
+    
+)
+add_test([=[ApplicationIntegrationTest.PropagatesConfigureFailure]=]  D:/DEV/framework/build/tests/Debug/framework_core_tests.exe [==[--gtest_filter=ApplicationIntegrationTest.PropagatesConfigureFailure]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[ApplicationIntegrationTest.PropagatesConfigureFailure]=]
+  PROPERTIES
+    
+    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\integration\application_test.cpp:31]==]
+    WORKING_DIRECTORY [==[D:/DEV/framework/build/tests]==]
+    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
+    
+)
+add_test([=[ResultStressTest.RepeatedValueAndErrorConstruction]=]  D:/DEV/framework/build/tests/Debug/framework_core_tests.exe [==[--gtest_filter=ResultStressTest.RepeatedValueAndErrorConstruction]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[ResultStressTest.RepeatedValueAndErrorConstruction]=]
+  PROPERTIES
+    
+    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\stress\result_stress_test.cpp:5]==]
+    WORKING_DIRECTORY [==[D:/DEV/framework/build/tests]==]
+    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
+    
+)
+add_test([=[CoreSystemTest.CoreHeadersAreUsableTogether]=]  D:/DEV/framework/build/tests/Debug/framework_core_tests.exe [==[--gtest_filter=CoreSystemTest.CoreHeadersAreUsableTogether]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[CoreSystemTest.CoreHeadersAreUsableTogether]=]
+  PROPERTIES
+    
+    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\system\core_smoke_test.cpp:11]==]
+    WORKING_DIRECTORY [==[D:/DEV/framework/build/tests]==]
+    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
+    
+)
+set(framework_core_tests_TESTS [==[ErrorTest.PreservesCodeAndMessage]==] [==[ErrorTest.CapturesSourceLocation]==] [==[ResultTest.StoresValue]==] [==[ResultTest.StoresError]==] [==[ResultTest.SupportsMoveOnlyValue]==] [==[ResultTest.VoidSuccessHasNoError]==] [==[ResultTest.VoidFailureStoresError]==] [==[RuntimeTest.ModuleWithoutDependenciesCanInitializeAndStart]==] [==[RuntimeTest.DependenciesInitializeAndStartBeforeDependent]==] [==[RuntimeTest.CircularDependencyIsRejected]==] [==[RuntimeTest.MissingDependencyIsRejected]==] [==[RuntimeTest.FailedStartRollsBackModulesAlreadyStarted]==] [==[RuntimeTest.StopUsesReverseDependencyOrder]==] [==[RuntimeTest.InvalidLifecycleStateIsRejected]==] [==[RuntimeTest.LifecycleTransitionContractAcceptsOnlyValidStates]==] [==[RuntimeTest.RuntimeContextProvidesNonOwningRuntimeServices]==] [==[RuntimeTest.DuplicateModuleIdIsRejected]==] [==[RuntimeTest.ExampleModuleFollowsCompleteLifecycle]==] [==[RuntimeTest.ExampleModuleUsesLoggerAndEventBusServices]==] [==[PluginLoaderTest.LoadsValidPluginAndOwnsModuleLifetime]==] [==[PluginLoaderTest.RejectsMissingPlugin]==] [==[PluginLoaderTest.RejectsIncompatibleApiVersion]==] [==[PluginLoaderTest.RejectsIncompatibleAbiVersion]==] [==[PluginLoaderTest.RegistersLoadedPluginWithModuleManager]==] [==[PluginLoaderTest.UnloadsPluginAfterStoppingItsModule]==] [==[CoreIntegrationTest.PublicTypesComposeWithoutUpperLayers]==] [==[LifetimeIntegrationTest.EventSubscriptionIsRemovedWhenModuleIsDestroyed]==] [==[LifetimeIntegrationTest.RuntimeStopUnloadsRegisteredPlugin]==] [==[ApplicationIntegrationTest.RunsAndReturnsApplicationExitCode]==] [==[ApplicationIntegrationTest.PropagatesConfigureFailure]==] [==[ResultStressTest.RepeatedValueAndErrorConstruction]==] [==[CoreSystemTest.CoreHeadersAreUsableTogether]==])

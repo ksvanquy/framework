@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\DEV\framework\build-qt\CMakeFiles\883e544e6ee3d6ef852f33475ebb5ba7\.qmlls.build.ini.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\DEV\framework\build-qt\CMakeFiles\b934be524e879660e303ed28e0dcf73f\generate_qmlls_build_ini_file.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\DEV\framework\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\DEV\framework\build-qt\CMakeFiles\generate_qmlls_build_ini_file" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{69409CF5-2E95-3F45-8182-2F3EEC9DF485}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

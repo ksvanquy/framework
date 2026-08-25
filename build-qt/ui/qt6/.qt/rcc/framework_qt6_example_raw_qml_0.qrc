@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/qt/qml/Framework/Qt6/">
+    <file alias="Main.qml">D:/DEV/framework/ui/qt6/Main.qml</file>
+  </qresource>
+</RCC>
+

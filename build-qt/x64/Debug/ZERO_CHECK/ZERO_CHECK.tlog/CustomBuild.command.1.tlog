@@ -1,0 +1,10 @@
+^D:\DEV\FRAMEWORK\BUILD-QT\CMAKEFILES\B934BE524E879660E303ED28E0DCF73F\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/DEV/framework -BD:/DEV/framework/build-qt --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/DEV/framework/build-qt/CppApplicationFramework.slnx
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

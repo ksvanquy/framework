@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "name": "Qt 6.11.2 MSVC2022 Debug",
+            "compilerPath": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.42.34433/bin/Hostx64/x64/cl.exe",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "windows-msvc-x64",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/Qt/6.11.2/msvc2022_64/include",
+                "C:/Qt/6.11.2/msvc2022_64/include/QtCore",
+                "C:/Qt/6.11.2/msvc2022_64/include/QtGui",
+                "C:/Qt/6.11.2/msvc2022_64/include/QtWidgets",
+                "C:/Qt/6.11.2/msvc2022_64/include/QtQml"
+            ],
+            "defines": [
+                "UNICODE",
+                "_UNICODE",
+                "WIN32",
+                "_WINDOWS",
+                "QT_CORE_LIB",
+                "QT_GUI_LIB",
+                "QT_WIDGETS_LIB"
+            ]
+        }
+    ],
+    "version": 4
+}

@@ -1,0 +1,5 @@
+if(EXISTS "D:/DEV/framework/build/tests/framework_core_tests_e3b0c442_Debug_tests.cmake")
+  include("D:/DEV/framework/build/tests/framework_core_tests_e3b0c442_Debug_tests.cmake")
+else()
+  add_test(framework_core_tests_NOT_BUILT framework_core_tests_NOT_BUILT)
+endif()

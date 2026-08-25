@@ -1,0 +1,220 @@
+{
+  "tests": 32,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "ErrorTest",
+      "tests": 2,
+      "testsuite": [
+        {
+          "name": "PreservesCodeAndMessage",
+          "file": "D:\\DEV\\framework\\tests\\unit\\error_test.cpp",
+          "line": 9
+        },
+        {
+          "name": "CapturesSourceLocation",
+          "file": "D:\\DEV\\framework\\tests\\unit\\error_test.cpp",
+          "line": 17
+        }
+      ]
+    },
+    {
+      "name": "ResultTest",
+      "tests": 5,
+      "testsuite": [
+        {
+          "name": "StoresValue",
+          "file": "D:\\DEV\\framework\\tests\\unit\\result_test.cpp",
+          "line": 9
+        },
+        {
+          "name": "StoresError",
+          "file": "D:\\DEV\\framework\\tests\\unit\\result_test.cpp",
+          "line": 17
+        },
+        {
+          "name": "SupportsMoveOnlyValue",
+          "file": "D:\\DEV\\framework\\tests\\unit\\result_test.cpp",
+          "line": 26
+        },
+        {
+          "name": "VoidSuccessHasNoError",
+          "file": "D:\\DEV\\framework\\tests\\unit\\result_test.cpp",
+          "line": 33
+        },
+        {
+          "name": "VoidFailureStoresError",
+          "file": "D:\\DEV\\framework\\tests\\unit\\result_test.cpp",
+          "line": 40
+        }
+      ]
+    },
+    {
+      "name": "RuntimeTest",
+      "tests": 12,
+      "testsuite": [
+        {
+          "name": "ModuleWithoutDependenciesCanInitializeAndStart",
+          "file": "D:\\DEV\\framework\\tests\\unit\\runtime_test.cpp",
+          "line": 80
+        },
+        {
+          "name": "DependenciesInitializeAndStartBeforeDependent",
+          "file": "D:\\DEV\\framework\\tests\\unit\\runtime_test.cpp",
+          "line": 93
+        },
+        {
+          "name": "CircularDependencyIsRejected",
+          "file": "D:\\DEV\\framework\\tests\\unit\\runtime_test.cpp",
+          "line": 108
+        },
+        {
+          "name": "MissingDependencyIsRejected",
+          "file": "D:\\DEV\\framework\\tests\\unit\\runtime_test.cpp",
+          "line": 122
+        },
+        {
+          "name": "FailedStartRollsBackModulesAlreadyStarted",
+          "file": "D:\\DEV\\framework\\tests\\unit\\runtime_test.cpp",
+          "line": 133
+        },
+        {
+          "name": "StopUsesReverseDependencyOrder",
+          "file": "D:\\DEV\\framework\\tests\\unit\\runtime_test.cpp",
+          "line": 157
+        },
+        {
+          "name": "InvalidLifecycleStateIsRejected",
+          "file": "D:\\DEV\\framework\\tests\\unit\\runtime_test.cpp",
+          "line": 172
+        },
+        {
+          "name": "LifecycleTransitionContractAcceptsOnlyValidStates",
+          "file": "D:\\DEV\\framework\\tests\\unit\\runtime_test.cpp",
+          "line": 184
+        },
+        {
+          "name": "RuntimeContextProvidesNonOwningRuntimeServices",
+          "file": "D:\\DEV\\framework\\tests\\unit\\runtime_test.cpp",
+          "line": 195
+        },
+        {
+          "name": "DuplicateModuleIdIsRejected",
+          "file": "D:\\DEV\\framework\\tests\\unit\\runtime_test.cpp",
+          "line": 207
+        },
+        {
+          "name": "ExampleModuleFollowsCompleteLifecycle",
+          "file": "D:\\DEV\\framework\\tests\\unit\\runtime_test.cpp",
+          "line": 218
+        },
+        {
+          "name": "ExampleModuleUsesLoggerAndEventBusServices",
+          "file": "D:\\DEV\\framework\\tests\\unit\\runtime_test.cpp",
+          "line": 235
+        }
+      ]
+    },
+    {
+      "name": "PluginLoaderTest",
+      "tests": 6,
+      "testsuite": [
+        {
+          "name": "LoadsValidPluginAndOwnsModuleLifetime",
+          "file": "D:\\DEV\\framework\\tests\\unit\\plugin_loader_test.cpp",
+          "line": 12
+        },
+        {
+          "name": "RejectsMissingPlugin",
+          "file": "D:\\DEV\\framework\\tests\\unit\\plugin_loader_test.cpp",
+          "line": 33
+        },
+        {
+          "name": "RejectsIncompatibleApiVersion",
+          "file": "D:\\DEV\\framework\\tests\\unit\\plugin_loader_test.cpp",
+          "line": 42
+        },
+        {
+          "name": "RejectsIncompatibleAbiVersion",
+          "file": "D:\\DEV\\framework\\tests\\unit\\plugin_loader_test.cpp",
+          "line": 51
+        },
+        {
+          "name": "RegistersLoadedPluginWithModuleManager",
+          "file": "D:\\DEV\\framework\\tests\\unit\\plugin_loader_test.cpp",
+          "line": 60
+        },
+        {
+          "name": "UnloadsPluginAfterStoppingItsModule",
+          "file": "D:\\DEV\\framework\\tests\\unit\\plugin_loader_test.cpp",
+          "line": 79
+        }
+      ]
+    },
+    {
+      "name": "CoreIntegrationTest",
+      "tests": 1,
+      "testsuite": [
+        {
+          "name": "PublicTypesComposeWithoutUpperLayers",
+          "file": "D:\\DEV\\framework\\tests\\integration\\core_headers_test.cpp",
+          "line": 9
+        }
+      ]
+    },
+    {
+      "name": "LifetimeIntegrationTest",
+      "tests": 2,
+      "testsuite": [
+        {
+          "name": "EventSubscriptionIsRemovedWhenModuleIsDestroyed",
+          "file": "D:\\DEV\\framework\\tests\\integration\\lifetime_test.cpp",
+          "line": 58
+        },
+        {
+          "name": "RuntimeStopUnloadsRegisteredPlugin",
+          "file": "D:\\DEV\\framework\\tests\\integration\\lifetime_test.cpp",
+          "line": 76
+        }
+      ]
+    },
+    {
+      "name": "ApplicationIntegrationTest",
+      "tests": 2,
+      "testsuite": [
+        {
+          "name": "RunsAndReturnsApplicationExitCode",
+          "file": "D:\\DEV\\framework\\tests\\integration\\application_test.cpp",
+          "line": 24
+        },
+        {
+          "name": "PropagatesConfigureFailure",
+          "file": "D:\\DEV\\framework\\tests\\integration\\application_test.cpp",
+          "line": 31
+        }
+      ]
+    },
+    {
+      "name": "ResultStressTest",
+      "tests": 1,
+      "testsuite": [
+        {
+          "name": "RepeatedValueAndErrorConstruction",
+          "file": "D:\\DEV\\framework\\tests\\stress\\result_stress_test.cpp",
+          "line": 5
+        }
+      ]
+    },
+    {
+      "name": "CoreSystemTest",
+      "tests": 1,
+      "testsuite": [
+        {
+          "name": "CoreHeadersAreUsableTogether",
+          "file": "D:\\DEV\\framework\\tests\\system\\core_smoke_test.cpp",
+          "line": 11
+        }
+      ]
+    }
+  ]
+}

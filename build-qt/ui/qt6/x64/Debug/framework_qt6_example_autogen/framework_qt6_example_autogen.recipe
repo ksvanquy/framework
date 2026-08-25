@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>D:\DEV\framework\build-qt\x64\Debug\ZERO_CHECK</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\DEV\framework\build-qt\ui\qt6\x64\Debug\framework_qt6_example_copy_qml</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\DEV\framework\build-qt\ui\qt6\x64\Debug\framework_qt6_example_copy_res</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\DEV\framework\build-qt\ui\qt6\x64\Debug\framework_qt6_example_qmlimportscan</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\DEV\framework\build-qt\x64\Debug\generate_qmlls_build_ini_file</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\DEV\framework\build-qt\ui\qt6\x64\Debug\framework_qt6_example_autogen_timestamp_deps</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\DEV\framework\build-qt\ui\qt6\x64\Debug\framework_qt6_example_autogen</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles />
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>

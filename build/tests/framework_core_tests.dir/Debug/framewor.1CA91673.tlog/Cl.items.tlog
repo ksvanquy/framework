@@ -1,0 +1,9 @@
+D:\DEV\framework\tests\unit\error_test.cpp;D:\DEV\framework\build\tests\framework_core_tests.dir\Debug\error_test.obj
+D:\DEV\framework\tests\unit\result_test.cpp;D:\DEV\framework\build\tests\framework_core_tests.dir\Debug\result_test.obj
+D:\DEV\framework\tests\unit\runtime_test.cpp;D:\DEV\framework\build\tests\framework_core_tests.dir\Debug\runtime_test.obj
+D:\DEV\framework\tests\unit\plugin_loader_test.cpp;D:\DEV\framework\build\tests\framework_core_tests.dir\Debug\plugin_loader_test.obj
+D:\DEV\framework\tests\integration\core_headers_test.cpp;D:\DEV\framework\build\tests\framework_core_tests.dir\Debug\core_headers_test.obj
+D:\DEV\framework\tests\integration\lifetime_test.cpp;D:\DEV\framework\build\tests\framework_core_tests.dir\Debug\lifetime_test.obj
+D:\DEV\framework\tests\integration\application_test.cpp;D:\DEV\framework\build\tests\framework_core_tests.dir\Debug\application_test.obj
+D:\DEV\framework\tests\stress\result_stress_test.cpp;D:\DEV\framework\build\tests\framework_core_tests.dir\Debug\result_stress_test.obj
+D:\DEV\framework\tests\system\core_smoke_test.cpp;D:\DEV\framework\build\tests\framework_core_tests.dir\Debug\core_smoke_test.obj

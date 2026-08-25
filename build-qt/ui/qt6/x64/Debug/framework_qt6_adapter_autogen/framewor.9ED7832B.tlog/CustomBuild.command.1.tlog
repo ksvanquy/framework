@@ -1,0 +1,40 @@
+^D:\DEV\FRAMEWORK\BUILD-QT\CMAKEFILES\83C05706EE97B218027291886A16D15E\TIMESTAMP_(CONFIG).RULE
+setlocal
+cd D:\DEV\framework\build-qt\ui\qt6
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen D:/DEV/framework/build-qt/ui/qt6/CMakeFiles/framework_qt6_adapter_autogen.dir/AutogenInfo.json Debug
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/DEV/framework/build-qt/ui/qt6/framework_qt6_adapter_autogen/timestamp_Debug
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_transform_depfile "Visual Studio 18 2026" MSBuildAdditionalInputs D:/DEV/framework D:/DEV/framework/ui/qt6 D:/DEV/framework/build-qt D:/DEV/framework/build-qt/ui/qt6 D:/DEV/framework/build-qt/ui/qt6/framework_qt6_adapter_autogen/deps_Debug D:/DEV/framework/build-qt/CMakeFiles/d/02fb4b0f833d19346686417a0f730a5787a1d7205e8ba9e161ac701e454695d7.AdditionalInputs
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\DEV\FRAMEWORK\BUILD-QT\CMAKEFILES\6046D6E8B532E2B064C6CC5C92B13646\FRAMEWORK_QT6_ADAPTER_AUTOGEN.RULE
+setlocal
+cd D:\DEV\framework\build-qt\ui\qt6
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\DEV\FRAMEWORK\UI\QT6\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/DEV/framework -BD:/DEV/framework/build-qt --check-stamp-file D:/DEV/framework/build-qt/ui/qt6/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

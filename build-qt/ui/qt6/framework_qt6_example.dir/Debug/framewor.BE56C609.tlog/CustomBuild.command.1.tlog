@@ -1,0 +1,98 @@
+^D:\DEV\FRAMEWORK\BUILD-QT\CMAKEFILES\330BE81B8529B9D724A616E42AA1D93A\FRAMEWORK_QT6_EXAMPLE_JSON_FILE_LIST.TXT.RULE
+setlocal
+C:\Qt\6.11.2\msvc2022_64\bin\cmake_automoc_parser.exe --cmake-autogen-cache-file D:/DEV/framework/build-qt/ui/qt6/CMakeFiles/framework_qt6_example_autogen.dir/ParseCache_Debug.txt --cmake-autogen-info-file D:/DEV/framework/build-qt/ui/qt6/CMakeFiles/framework_qt6_example_autogen.dir/AutogenInfo.json --output-file-path D:/DEV/framework/build-qt/ui/qt6/meta_types/framework_qt6_example_json_file_list.txt --timestamp-file-path D:/DEV/framework/build-qt/ui/qt6/meta_types/framework_qt6_example_json_file_list.txt.timestamp --cmake-autogen-include-dir-path D:/DEV/framework/build-qt/ui/qt6/framework_qt6_example_autogen/include_Debug --cmake-multi-config
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\DEV\FRAMEWORK\BUILD-QT\CMAKEFILES\330BE81B8529B9D724A616E42AA1D93A\QT6FRAMEWORK_QT6_EXAMPLE_METATYPES.JSON.GEN.RULE
+setlocal
+C:\Qt\6.11.2\msvc2022_64\bin\moc.exe -o D:/DEV/framework/build-qt/ui/qt6/meta_types/qt6framework_qt6_example_metatypes.json.gen --collect-json @D:/DEV/framework/build-qt/ui/qt6/meta_types/framework_qt6_example_json_file_list.txt
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/DEV/framework/build-qt/ui/qt6/meta_types/qt6framework_qt6_example_metatypes.json.gen D:/DEV/framework/build-qt/ui/qt6/meta_types/qt6framework_qt6_example_metatypes.json
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\DEV\FRAMEWORK\BUILD-QT\CMAKEFILES\330BE81B8529B9D724A616E42AA1D93A\QT6FRAMEWORK_QT6_EXAMPLE_METATYPES.JSON.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/DEV/framework/build-qt/ui/qt6/meta_types/qt6framework_qt6_example_metatypes.json
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\DEV\FRAMEWORK\BUILD-QT\CMAKEFILES\21C97287EE4A3A208F53632819FCE093\FRAMEWORK_QT6_EXAMPLE_QMLTYPEREGISTRATIONS.CPP.RULE
+setlocal
+call ..\..\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.11.2/msvc2022_64/bin/qmltyperegistrar.exe --generate-qmltypes=D:/DEV/framework/build-qt/ui/qt6/Framework/Qt6/framework_qt6_example.qmltypes --import-name=Framework.Qt6 --major-version=1 --minor-version=0 @D:/DEV/framework/build-qt/ui/qt6/qmltypes/framework_qt6_example_foreign_types.txt -o D:/DEV/framework/build-qt/ui/qt6/framework_qt6_example_qmltyperegistrations.cpp D:/DEV/framework/build-qt/ui/qt6/meta_types/qt6framework_qt6_example_metatypes.json
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/DEV/framework/build-qt/ui/qt6/.qt/qmltypes
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/DEV/framework/build-qt/ui/qt6/.qt/qmltypes/framework_qt6_example.qmltypes
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\DEV\FRAMEWORK\BUILD-QT\CMAKEFILES\775D877B00388D56F5BD89021646ADA9\QRC_QMAKE_FRAMEWORK_QT6.CPP.RULE
+setlocal
+C:\Qt\6.11.2\msvc2022_64\bin\rcc.exe --output D:/DEV/framework/build-qt/ui/qt6/.qt/rcc/qrc_qmake_Framework_Qt6.cpp --name qmake_Framework_Qt6 D:/DEV/framework/build-qt/ui/qt6/.qt/rcc/qmake_Framework_Qt6.qrc --no-zstd
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\DEV\FRAMEWORK\BUILD-QT\CMAKEFILES\B2ED2DDA5F7EA6D8F20BC816BF518221\FRAMEWORK_QT6_EXAMPLE_QMLCACHE_LOADER.CPP.RULE
+setlocal
+call ..\..\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.11.2/msvc2022_64/bin/qmlcachegen.exe --resource-name qmlcache_framework_qt6_example -o D:/DEV/framework/build-qt/ui/qt6/.rcc/qmlcache/framework_qt6_example_qmlcache_loader.cpp @D:/DEV/framework/build-qt/ui/qt6/.rcc/qmlcache/framework_qt6_example_qml_loader_file_list.rsp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\DEV\FRAMEWORK\BUILD-QT\CMAKEFILES\B2ED2DDA5F7EA6D8F20BC816BF518221\FRAMEWORK_QT6_EXAMPLE_MAIN_QML.CPP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/DEV/framework/build-qt/ui/qt6/.rcc/qmlcache
+if %errorlevel% neq 0 goto :cmEnd
+call ..\..\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.11.2/msvc2022_64/bin/qmlcachegen.exe --bare --resource-path /qt/qml/Framework/Qt6/Main.qml -I D:/DEV/framework/build-qt/ui/qt6 -I C:/Qt/6.11.2/msvc2022_64/qml -i D:/DEV/framework/build-qt/ui/qt6/Framework/Qt6/qmldir --resource D:/DEV/framework/build-qt/ui/qt6/.qt/rcc/qmake_Framework_Qt6.qrc --resource D:/DEV/framework/build-qt/ui/qt6/.qt/rcc/framework_qt6_example_raw_qml_0.qrc --dump-aot-stats --module-id=Framework.Qt6(framework_qt6_example) -o D:/DEV/framework/build-qt/ui/qt6/.rcc/qmlcache/framework_qt6_example_Main_qml.cpp D:/DEV/framework/ui/qt6/Main.qml
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\DEV\FRAMEWORK\BUILD-QT\CMAKEFILES\775D877B00388D56F5BD89021646ADA9\QRC_FRAMEWORK_QT6_EXAMPLE_RAW_QML_0.CPP.RULE
+setlocal
+C:\Qt\6.11.2\msvc2022_64\bin\rcc.exe --output D:/DEV/framework/build-qt/ui/qt6/.qt/rcc/qrc_framework_qt6_example_raw_qml_0.cpp --name framework_qt6_example_raw_qml_0 D:/DEV/framework/build-qt/ui/qt6/.qt/rcc/framework_qt6_example_raw_qml_0.qrc --no-zstd
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\DEV\FRAMEWORK\UI\QT6\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/DEV/framework -BD:/DEV/framework/build-qt --check-stamp-file D:/DEV/framework/build-qt/ui/qt6/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

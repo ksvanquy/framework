@@ -1,0 +1,66 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-and-test:
+    name: ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure
+        run: cmake -S . -B build -DBUILD_TESTING=ON -DBUILD_EXAMPLES=ON -DBUILD_PLUGINS=ON
+
+      - name: Build
+        run: cmake --build build --config Debug --parallel
+
+      - name: Test
+        run: ctest --test-dir build -C Debug --output-on-failure
+
+      - name: Install
+        run: cmake --install build --config Debug --prefix ${{ github.workspace }}/install
+
+      - name: Verify installed package
+        run: >-
+          cmake -S tests/package_consumer -B package-consumer-build
+          -DCMAKE_PREFIX_PATH=${{ github.workspace }}/install
+          -DCMAKE_BUILD_TYPE=Debug
+
+      - name: Build package consumer
+        run: cmake --build package-consumer-build --config Debug --parallel
+
+  sanitizer:
+    name: Ubuntu Sanitizers
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure
+        run: cmake -S . -B build-sanitized -DENABLE_SANITIZERS=ON -DBUILD_TESTING=ON -DBUILD_EXAMPLES=OFF
+      - name: Build
+        run: cmake --build build-sanitized --parallel
+      - name: Test
+        run: ctest --test-dir build-sanitized --output-on-failure
+
+  static-analysis:
+    name: Ubuntu Clang-Tidy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install clang-tidy
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y clang-tidy
+      - name: Configure
+        run: cmake -S . -B build-analysis -DENABLE_CLANG_TIDY=ON -DBUILD_TESTING=ON -DBUILD_EXAMPLES=OFF
+      - name: Build
+        run: cmake --build build-analysis --parallel
+      - name: Test
+        run: ctest --test-dir build-analysis --output-on-failure

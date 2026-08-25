@@ -1,0 +1,32 @@
+^D:\DEV\FRAMEWORK\BUILD-QT\CMAKEFILES\486E699B689E8922A7D057CA5F5921C3\FRAMEWORK_QT6_EXAMPLE_BUILD.CMAKE.RULE
+setlocal
+cd D:\DEV\framework\ui\qt6
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+call D:\DEV\framework\build-qt\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.11.2/msvc2022_64/bin/qmlimportscanner.exe @D:/DEV/framework/build-qt/ui/qt6/.qt/qml_imports/framework_qt6_example_build.rsp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\DEV\FRAMEWORK\BUILD-QT\CMAKEFILES\6046D6E8B532E2B064C6CC5C92B13646\FRAMEWORK_QT6_EXAMPLE_QMLIMPORTSCAN.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\DEV\FRAMEWORK\UI\QT6\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/DEV/framework -BD:/DEV/framework/build-qt --check-stamp-file D:/DEV/framework/build-qt/ui/qt6/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

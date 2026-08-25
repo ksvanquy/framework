@@ -1,0 +1,10 @@
+^D:\DEV\FRAMEWORK\TESTS\PACKAGE_CONSUMER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/DEV/framework/tests/package_consumer -BD:/DEV/framework/build/package-consumer --check-stamp-file D:/DEV/framework/build/package-consumer/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

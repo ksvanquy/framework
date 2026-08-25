@@ -1,0 +1,5 @@
+if(EXISTS "D:/DEV/framework/build/Desktop_Qt_6_11_2_MSVC2022_64bit_Debug/tests/framework_core_tests[1]_tests.cmake")
+  include("D:/DEV/framework/build/Desktop_Qt_6_11_2_MSVC2022_64bit_Debug/tests/framework_core_tests[1]_tests.cmake")
+else()
+  add_test(framework_core_tests_NOT_BUILT framework_core_tests_NOT_BUILT)
+endif()

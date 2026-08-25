@@ -1,0 +1,3 @@
+[D:<SLASH>DEV<SLASH>framework<SLASH>ui<SLASH>qt6]
+importPaths="D:/DEV/framework/build-qt/ui/qt6;D:/DEV/framework/build-qt/ui/qt6/Framework/Qt6;D:/DEV/framework/build-qt"
+resourceFiles="D:/DEV/framework/build-qt/ui/qt6/.qt/rcc/qmake_Framework_Qt6.qrc;D:/DEV/framework/build-qt/ui/qt6/.qt/rcc/framework_qt6_example_raw_qml_0.qrc"

@@ -1,0 +1,2 @@
+#pragma code_page(65001)
+2 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "D:/DEV/framework/build/Desktop_Qt_6_11_2_MSVC2022_64bit_Debug/plugins/example_plugin/CMakeFiles/framework_invalid_abi_plugin.dir/embed.manifest"

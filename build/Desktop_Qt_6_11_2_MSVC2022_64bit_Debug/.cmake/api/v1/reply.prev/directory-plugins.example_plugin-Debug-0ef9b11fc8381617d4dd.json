@@ -1,0 +1,45 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"plugins/example_plugin/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 20,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib/framework/plugins",
+			"paths" : 
+			[
+				"plugins/example_plugin/framework_example_plugin.dll"
+			],
+			"targetId" : "framework_example_plugin::@a3e79279b6d07cc9fd45",
+			"targetIndex" : 30,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "plugins/example_plugin",
+		"source" : "plugins/example_plugin"
+	}
+}

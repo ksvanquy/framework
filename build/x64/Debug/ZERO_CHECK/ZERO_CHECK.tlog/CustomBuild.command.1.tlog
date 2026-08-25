@@ -1,0 +1,10 @@
+^D:\DEV\FRAMEWORK\BUILD\CMAKEFILES\D764AB2B191E27EEDE4508A61BC1A2B3\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/DEV/framework -BD:/DEV/framework/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/DEV/framework/build/CppApplicationFramework.slnx
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,6 @@
+module Framework.Qt6
+typeinfo framework_qt6_example.qmltypes
+prefer :/qt/qml/Framework/Qt6/
+Main 1.0 Main.qml
+depends QtQuick
+

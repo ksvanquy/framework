@@ -1,0 +1,12 @@
+{
+	"InstallScripts" : 
+	[
+		"D:/DEV/framework/build-qt/cmake_install.cmake",
+		"D:/DEV/framework/build-qt/core/cmake_install.cmake",
+		"D:/DEV/framework/build-qt/services/cmake_install.cmake",
+		"D:/DEV/framework/build-qt/runtime/cmake_install.cmake",
+		"D:/DEV/framework/build-qt/modules/example_module/cmake_install.cmake",
+		"D:/DEV/framework/build-qt/ui/qt6/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -1,0 +1,19 @@
+{
+    // Bắt buộc: Để CMake Tools tự động quản lý IntelliSense và includePath cho C/C++ extension
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+
+    // Tự động chạy lệnh configure CMake ngay khi bạn mở workspace/project
+    "cmake.configureOnOpen": true,
+
+    // Tùy chọn generator mặc định cho MSVC (có thể điều chỉnh tùy theo phiên bản Visual Studio của bạn)
+    "cmake.generator": "Visual Studio 17 2022",
+
+    // Số luồng tối đa khi build giúp tăng tốc quá trình biên dịch
+    "cmake.parallelJobs": 8,
+
+    // Cấu hình hiển thị file header cho C++
+    "files.associations": {
+        "*.h": "cpp",
+        "*.hpp": "cpp"
+    }
+}
