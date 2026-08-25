@@ -1,5 +1,5 @@
 {
-  "tests": 32,
+  "tests": 33,
   "name": "AllTests",
   "testsuites": [
     {
@@ -51,7 +51,7 @@
     },
     {
       "name": "RuntimeTest",
-      "tests": 12,
+      "tests": 13,
       "testsuite": [
         {
           "name": "ModuleWithoutDependenciesCanInitializeAndStart",
@@ -94,24 +94,29 @@
           "line": 184
         },
         {
+          "name": "RuntimeCanRestartAfterStop",
+          "file": "D:\\DEV\\framework\\tests\\unit\\runtime_test.cpp",
+          "line": 196
+        },
+        {
           "name": "RuntimeContextProvidesNonOwningRuntimeServices",
           "file": "D:\\DEV\\framework\\tests\\unit\\runtime_test.cpp",
-          "line": 195
+          "line": 209
         },
         {
           "name": "DuplicateModuleIdIsRejected",
           "file": "D:\\DEV\\framework\\tests\\unit\\runtime_test.cpp",
-          "line": 207
+          "line": 221
         },
         {
           "name": "ExampleModuleFollowsCompleteLifecycle",
           "file": "D:\\DEV\\framework\\tests\\unit\\runtime_test.cpp",
-          "line": 218
+          "line": 232
         },
         {
           "name": "ExampleModuleUsesLoggerAndEventBusServices",
           "file": "D:\\DEV\\framework\\tests\\unit\\runtime_test.cpp",
-          "line": 235
+          "line": 249
         }
       ]
     },

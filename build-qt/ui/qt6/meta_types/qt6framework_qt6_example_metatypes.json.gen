@@ -9,20 +9,34 @@
                     }
                 ],
                 "className": "RuntimeBridge",
-                "lineNumber": 10,
+                "lineNumber": 12,
                 "methods": [
                     {
                         "access": "public",
-                        "index": 2,
-                        "lineNumber": 21,
+                        "index": 4,
+                        "lineNumber": 27,
                         "name": "start",
                         "returnType": "void"
                     },
                     {
                         "access": "public",
-                        "index": 3,
-                        "lineNumber": 22,
+                        "index": 5,
+                        "lineNumber": 28,
                         "name": "stop",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 6,
+                        "lineNumber": 29,
+                        "name": "reset",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 7,
+                        "lineNumber": 30,
+                        "name": "clearError",
                         "returnType": "void"
                     }
                 ],
@@ -33,7 +47,7 @@
                         "designable": true,
                         "final": false,
                         "index": 0,
-                        "lineNumber": 13,
+                        "lineNumber": 15,
                         "name": "state",
                         "notify": "stateChanged",
                         "override": false,
@@ -44,6 +58,40 @@
                         "type": "QString",
                         "user": false,
                         "virtual": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 1,
+                        "lineNumber": 16,
+                        "name": "lastError",
+                        "notify": "lastErrorChanged",
+                        "override": false,
+                        "read": "lastError",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false,
+                        "virtual": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 2,
+                        "lineNumber": 17,
+                        "name": "moduleRegistered",
+                        "notify": "moduleRegisteredChanged",
+                        "override": false,
+                        "read": "moduleRegistered",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "bool",
+                        "user": false,
+                        "virtual": false
                     }
                 ],
                 "qualifiedClassName": "framework::ui::RuntimeBridge",
@@ -51,8 +99,22 @@
                     {
                         "access": "public",
                         "index": 0,
-                        "lineNumber": 25,
+                        "lineNumber": 33,
                         "name": "stateChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 1,
+                        "lineNumber": 34,
+                        "name": "moduleRegisteredChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 2,
+                        "lineNumber": 35,
+                        "name": "lastErrorChanged",
                         "returnType": "void"
                     },
                     {
@@ -63,8 +125,8 @@
                                 "type": "QString"
                             }
                         ],
-                        "index": 1,
-                        "lineNumber": 26,
+                        "index": 3,
+                        "lineNumber": 36,
                         "name": "errorOccurred",
                         "returnType": "void"
                     }

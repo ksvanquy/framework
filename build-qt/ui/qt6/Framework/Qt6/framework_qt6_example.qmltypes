@@ -8,7 +8,7 @@ import QtQuick.tooling 1.2
 Module {
     Component {
         file: "runtime_bridge.h"
-        lineNumber: 10
+        lineNumber: 12
         name: "framework::ui::RuntimeBridge"
         accessSemantics: "reference"
         prototype: "QObject"
@@ -20,16 +20,38 @@ Module {
             read: "state"
             notify: "stateChanged"
             index: 0
-            lineNumber: 13
+            lineNumber: 15
             isReadonly: true
         }
-        Signal { name: "stateChanged"; lineNumber: 25 }
+        Property {
+            name: "lastError"
+            type: "QString"
+            read: "lastError"
+            notify: "lastErrorChanged"
+            index: 1
+            lineNumber: 16
+            isReadonly: true
+        }
+        Property {
+            name: "moduleRegistered"
+            type: "bool"
+            read: "moduleRegistered"
+            notify: "moduleRegisteredChanged"
+            index: 2
+            lineNumber: 17
+            isReadonly: true
+        }
+        Signal { name: "stateChanged"; lineNumber: 33 }
+        Signal { name: "moduleRegisteredChanged"; lineNumber: 34 }
+        Signal { name: "lastErrorChanged"; lineNumber: 35 }
         Signal {
             name: "errorOccurred"
-            lineNumber: 26
+            lineNumber: 36
             Parameter { name: "message"; type: "QString" }
         }
-        Method { name: "start"; lineNumber: 21 }
-        Method { name: "stop"; lineNumber: 22 }
+        Method { name: "start"; lineNumber: 27 }
+        Method { name: "stop"; lineNumber: 28 }
+        Method { name: "reset"; lineNumber: 29 }
+        Method { name: "clearError"; lineNumber: 30 }
     }
 }

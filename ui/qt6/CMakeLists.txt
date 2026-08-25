@@ -26,3 +26,21 @@ target_link_libraries(framework_qt6_example PRIVATE
     framework_example_module
     Qt6::Quick
 )
+
+if(WIN32)
+    find_program(QT_DEPLOY_TOOL
+        NAMES windeployqt windeployqt.exe
+        HINTS "${Qt6_DIR}/../../../bin"
+    )
+
+    if(QT_DEPLOY_TOOL)
+        add_custom_command(TARGET framework_qt6_example POST_BUILD
+            COMMAND "${QT_DEPLOY_TOOL}"
+                --qmldir "${CMAKE_CURRENT_SOURCE_DIR}"
+                "$<TARGET_FILE:framework_qt6_example>"
+            VERBATIM
+        )
+    else()
+        message(WARNING "windeployqt was not found; the Qt6 example may not run without Qt DLLs on PATH")
+    endif()
+endif()

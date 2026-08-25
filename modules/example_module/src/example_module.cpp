@@ -9,7 +9,7 @@ const runtime::ModuleInfo& ExampleModule::info() const { return info_; }
 runtime::ModuleState ExampleModule::state() const { return state_; }
 
 core::Result<void> ExampleModule::initialize() {
-    if (state_ != runtime::ModuleState::Discovered) {
+    if (!runtime::canInitialize(state_)) {
         return core::Error(core::ErrorCode::StateError, "Example module cannot be initialized");
     }
     logger_.log(services::LogLevel::Info, "Module:Example", "Initializing");

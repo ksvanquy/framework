@@ -143,12 +143,14 @@ Contract hien tai:
 | Operation | State dau vao | State thanh cong |
 | --- | --- | --- |
 | Register | `Discovered`, `Loaded` | registered |
-| Initialize | `Discovered`, `Loaded` | `Initialized` |
+| Initialize | `Discovered`, `Loaded`, `Stopped` | `Initialized` |
 | Start | `Initialized` | `Started` hoac `Running` |
 | Stop | `Started`, `Running` | `Stopped` |
 | Unload plugin | `Discovered`, `Loaded`, `Initialized`, `Stopped` | removed, then `Unloaded` |
 
 `canInitialize()`, `canStart()` va `canStop()` trong `runtime/imodule.h` la nguon contract dung chung cho module va manager.
+
+Sau khi stop thanh cong, module co the initialize va start lai tren cung instance. Vi vay application co the lap lai chu trinh `initialize -> start -> stop` ma khong can reset Runtime.
 
 `ModuleManager` dam bao:
 

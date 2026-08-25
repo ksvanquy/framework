@@ -7968,3 +7968,108 @@ events:
         - "C:/Qt/6.11.2/msvc2022_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules"
         - "C:/Qt/6.11.2/msvc2022_64/lib/cmake/Qt6/3rdparty/kwin"
 ...
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "ui/qt6/CMakeLists.txt:31 (find_program)"
+    mode: "program"
+    variable: "QT_DEPLOY_TOOL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "windeployqt"
+      - "windeployqt.exe"
+    candidate_directories:
+      - "C:/Qt/6.11.2/msvc2022_64/bin/"
+      - "C:/Qt/6.11.2/msvc2022_64/sbin/"
+      - "C:/Qt/6.11.2/msvc2022_64/"
+      - "C:/Qt/6.11.2/msvc2022_64/bin/"
+      - "C:/Users/ksvan/.vscode/extensions/vadimcn.vscode-lldb-1.12.2/bin/"
+      - "C:/Users/ksvan/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/ksvan/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Python314/Scripts/"
+      - "C:/Python314/"
+      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/Bitvise SSH Client/"
+      - "C:/Program Files/nodejs/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Users/ksvan/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/ksvan/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/ksvan/AppData/Roaming/npm/"
+      - "C:/Users/ksvan/AppData/Local/Python/bin/"
+      - "C:/Users/ksvan/AppData/Local/Microsoft/WinGet/Packages/astral-sh.uv_Microsoft.Winget.Source_8wekyb3d8bbwe/"
+      - "C:/Program Files/bin/"
+      - "C:/Program Files/sbin/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/bin/"
+      - "C:/Program Files (x86)/sbin/"
+      - "C:/Program Files (x86)/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/CMake/sbin/"
+      - "C:/Program Files/CMake/"
+      - "C:/Program Files (x86)/CppApplicationFramework/bin/"
+      - "C:/Program Files (x86)/CppApplicationFramework/sbin/"
+      - "C:/Program Files (x86)/CppApplicationFramework/"
+    searched_directories:
+      - "C:/Qt/6.11.2/msvc2022_64/bin/windeployqt.com"
+    found: "C:/Qt/6.11.2/msvc2022_64/bin/windeployqt.exe"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "C:/Qt/6.11.2/msvc2022_64"
+      ENV{PATH}:
+        - "c:\\Users\\ksvan\\.vscode\\extensions\\vadimcn.vscode-lldb-1.12.2\\bin"
+        - "c:\\Users\\ksvan\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\ksvan\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Python314\\Scripts\\"
+        - "C:\\Python314\\"
+        - "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\Bitvise SSH Client"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Python314\\Scripts\\"
+        - "C:\\Python314\\"
+        - "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\Bitvise SSH Client"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Users\\ksvan\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\ksvan\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\ksvan\\AppData\\Roaming\\npm"
+        - "C:\\Users\\ksvan\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\ksvan\\AppData\\Local\\Microsoft\\WinGet\\Packages\\astral-sh.uv_Microsoft.Winget.Source_8wekyb3d8bbwe"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/CppApplicationFramework"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files (x86)/CppApplicationFramework"
+...

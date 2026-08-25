@@ -184,12 +184,26 @@ TEST(RuntimeTest, InvalidLifecycleStateIsRejected) {
 TEST(RuntimeTest, LifecycleTransitionContractAcceptsOnlyValidStates) {
     EXPECT_TRUE(framework::runtime::canInitialize(ModuleState::Discovered));
     EXPECT_TRUE(framework::runtime::canInitialize(ModuleState::Loaded));
+    EXPECT_TRUE(framework::runtime::canInitialize(ModuleState::Stopped));
     EXPECT_FALSE(framework::runtime::canInitialize(ModuleState::Initialized));
     EXPECT_TRUE(framework::runtime::canStart(ModuleState::Initialized));
     EXPECT_FALSE(framework::runtime::canStart(ModuleState::Running));
     EXPECT_TRUE(framework::runtime::canStop(ModuleState::Started));
     EXPECT_TRUE(framework::runtime::canStop(ModuleState::Running));
     EXPECT_FALSE(framework::runtime::canStop(ModuleState::Initialized));
+}
+
+TEST(RuntimeTest, RuntimeCanRestartAfterStop) {
+    framework::runtime::Runtime runtime;
+    ASSERT_TRUE(runtime.moduleManager().registerModule(
+        std::make_unique<framework::modules::ExampleModule>(runtime.logger(), runtime.eventBus())));
+
+    ASSERT_TRUE(runtime.initialize());
+    ASSERT_TRUE(runtime.start());
+    ASSERT_TRUE(runtime.stop());
+    ASSERT_TRUE(runtime.initialize());
+    ASSERT_TRUE(runtime.start());
+    EXPECT_TRUE(runtime.stop());
 }
 
 TEST(RuntimeTest, RuntimeContextProvidesNonOwningRuntimeServices) {

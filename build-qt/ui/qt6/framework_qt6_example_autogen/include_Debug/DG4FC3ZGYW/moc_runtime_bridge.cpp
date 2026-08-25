@@ -43,28 +43,46 @@ template <> constexpr inline auto framework::ui::RuntimeBridge::qt_create_metaob
         "auto",
         "stateChanged",
         "",
+        "moduleRegisteredChanged",
+        "lastErrorChanged",
         "errorOccurred",
         "message",
         "start",
         "stop",
-        "state"
+        "reset",
+        "clearError",
+        "state",
+        "lastError",
+        "moduleRegistered"
     };
 
     QtMocHelpers::UintData qt_methods {
         // Signal 'stateChanged'
         QtMocHelpers::SignalData<void()>(3, 4, QMC::AccessPublic, QMetaType::Void),
+        // Signal 'moduleRegisteredChanged'
+        QtMocHelpers::SignalData<void()>(5, 4, QMC::AccessPublic, QMetaType::Void),
+        // Signal 'lastErrorChanged'
+        QtMocHelpers::SignalData<void()>(6, 4, QMC::AccessPublic, QMetaType::Void),
         // Signal 'errorOccurred'
-        QtMocHelpers::SignalData<void(const QString &)>(5, 4, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::QString, 6 },
+        QtMocHelpers::SignalData<void(const QString &)>(7, 4, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 8 },
         }}),
         // Method 'start'
-        QtMocHelpers::MethodData<void()>(7, 4, QMC::AccessPublic, QMetaType::Void),
+        QtMocHelpers::MethodData<void()>(9, 4, QMC::AccessPublic, QMetaType::Void),
         // Method 'stop'
-        QtMocHelpers::MethodData<void()>(8, 4, QMC::AccessPublic, QMetaType::Void),
+        QtMocHelpers::MethodData<void()>(10, 4, QMC::AccessPublic, QMetaType::Void),
+        // Method 'reset'
+        QtMocHelpers::MethodData<void()>(11, 4, QMC::AccessPublic, QMetaType::Void),
+        // Method 'clearError'
+        QtMocHelpers::MethodData<void()>(12, 4, QMC::AccessPublic, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
         // property 'state'
-        QtMocHelpers::PropertyData<QString>(9, QMetaType::QString, QMC::DefaultPropertyFlags, 0),
+        QtMocHelpers::PropertyData<QString>(13, QMetaType::QString, QMC::DefaultPropertyFlags, 0),
+        // property 'lastError'
+        QtMocHelpers::PropertyData<QString>(14, QMetaType::QString, QMC::DefaultPropertyFlags, 2),
+        // property 'moduleRegistered'
+        QtMocHelpers::PropertyData<bool>(15, QMetaType::Bool, QMC::DefaultPropertyFlags, 1),
     };
     QtMocHelpers::UintData qt_enums {
     };
@@ -91,22 +109,32 @@ void framework::ui::RuntimeBridge::qt_static_metacall(QObject *_o, QMetaObject::
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: _t->stateChanged(); break;
-        case 1: _t->errorOccurred((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
-        case 2: _t->start(); break;
-        case 3: _t->stop(); break;
+        case 1: _t->moduleRegisteredChanged(); break;
+        case 2: _t->lastErrorChanged(); break;
+        case 3: _t->errorOccurred((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
+        case 4: _t->start(); break;
+        case 5: _t->stop(); break;
+        case 6: _t->reset(); break;
+        case 7: _t->clearError(); break;
         default: ;
         }
     }
     if (_c == QMetaObject::IndexOfMethod) {
         if (QtMocHelpers::indexOfMethod<void (RuntimeBridge::*)()>(_a, &RuntimeBridge::stateChanged, 0))
             return;
-        if (QtMocHelpers::indexOfMethod<void (RuntimeBridge::*)(const QString & )>(_a, &RuntimeBridge::errorOccurred, 1))
+        if (QtMocHelpers::indexOfMethod<void (RuntimeBridge::*)()>(_a, &RuntimeBridge::moduleRegisteredChanged, 1))
+            return;
+        if (QtMocHelpers::indexOfMethod<void (RuntimeBridge::*)()>(_a, &RuntimeBridge::lastErrorChanged, 2))
+            return;
+        if (QtMocHelpers::indexOfMethod<void (RuntimeBridge::*)(const QString & )>(_a, &RuntimeBridge::errorOccurred, 3))
             return;
     }
     if (_c == QMetaObject::ReadProperty) {
         void *_v = _a[0];
         switch (_id) {
         case 0: *reinterpret_cast<QString*>(_v) = _t->state(); break;
+        case 1: *reinterpret_cast<QString*>(_v) = _t->lastError(); break;
+        case 2: *reinterpret_cast<bool*>(_v) = _t->moduleRegistered(); break;
         default: break;
         }
     }
@@ -131,20 +159,20 @@ int framework::ui::RuntimeBridge::qt_metacall(QMetaObject::Call _c, int _id, voi
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 8)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 8;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 4)
+        if (_id < 8)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 4;
+        _id -= 8;
     }
     if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
             || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty
             || _c == QMetaObject::RegisterPropertyMetaType) {
         qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 3;
     }
     return _id;
 }
@@ -156,8 +184,20 @@ void framework::ui::RuntimeBridge::stateChanged()
 }
 
 // SIGNAL 1
+void framework::ui::RuntimeBridge::moduleRegisteredChanged()
+{
+    QMetaObject::activate(this, &staticMetaObject, 1, nullptr);
+}
+
+// SIGNAL 2
+void framework::ui::RuntimeBridge::lastErrorChanged()
+{
+    QMetaObject::activate(this, &staticMetaObject, 2, nullptr);
+}
+
+// SIGNAL 3
 void framework::ui::RuntimeBridge::errorOccurred(const QString & _t1)
 {
-    QMetaObject::activate<void>(this, &staticMetaObject, 1, nullptr, _t1);
+    QMetaObject::activate<void>(this, &staticMetaObject, 3, nullptr, _t1);
 }
 QT_WARNING_POP

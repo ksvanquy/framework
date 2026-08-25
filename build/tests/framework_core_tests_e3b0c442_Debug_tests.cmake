@@ -133,11 +133,20 @@ set_tests_properties([=[RuntimeTest.LifecycleTransitionContractAcceptsOnlyValidS
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
+add_test([=[RuntimeTest.RuntimeCanRestartAfterStop]=]  D:/DEV/framework/build/tests/Debug/framework_core_tests.exe [==[--gtest_filter=RuntimeTest.RuntimeCanRestartAfterStop]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[RuntimeTest.RuntimeCanRestartAfterStop]=]
+  PROPERTIES
+    
+    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\unit\runtime_test.cpp:196]==]
+    WORKING_DIRECTORY [==[D:/DEV/framework/build/tests]==]
+    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
+    
+)
 add_test([=[RuntimeTest.RuntimeContextProvidesNonOwningRuntimeServices]=]  D:/DEV/framework/build/tests/Debug/framework_core_tests.exe [==[--gtest_filter=RuntimeTest.RuntimeContextProvidesNonOwningRuntimeServices]==] --gtest_also_run_disabled_tests)
 set_tests_properties([=[RuntimeTest.RuntimeContextProvidesNonOwningRuntimeServices]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\unit\runtime_test.cpp:195]==]
+    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\unit\runtime_test.cpp:209]==]
     WORKING_DIRECTORY [==[D:/DEV/framework/build/tests]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
@@ -146,7 +155,7 @@ add_test([=[RuntimeTest.DuplicateModuleIdIsRejected]=]  D:/DEV/framework/build/t
 set_tests_properties([=[RuntimeTest.DuplicateModuleIdIsRejected]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\unit\runtime_test.cpp:207]==]
+    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\unit\runtime_test.cpp:221]==]
     WORKING_DIRECTORY [==[D:/DEV/framework/build/tests]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
@@ -155,7 +164,7 @@ add_test([=[RuntimeTest.ExampleModuleFollowsCompleteLifecycle]=]  D:/DEV/framewo
 set_tests_properties([=[RuntimeTest.ExampleModuleFollowsCompleteLifecycle]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\unit\runtime_test.cpp:218]==]
+    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\unit\runtime_test.cpp:232]==]
     WORKING_DIRECTORY [==[D:/DEV/framework/build/tests]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
@@ -164,7 +173,7 @@ add_test([=[RuntimeTest.ExampleModuleUsesLoggerAndEventBusServices]=]  D:/DEV/fr
 set_tests_properties([=[RuntimeTest.ExampleModuleUsesLoggerAndEventBusServices]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\unit\runtime_test.cpp:235]==]
+    DEF_SOURCE_LINE [==[D:\DEV\framework\tests\unit\runtime_test.cpp:249]==]
     WORKING_DIRECTORY [==[D:/DEV/framework/build/tests]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
@@ -286,4 +295,4 @@ set_tests_properties([=[CoreSystemTest.CoreHeadersAreUsableTogether]=]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-set(framework_core_tests_TESTS [==[ErrorTest.PreservesCodeAndMessage]==] [==[ErrorTest.CapturesSourceLocation]==] [==[ResultTest.StoresValue]==] [==[ResultTest.StoresError]==] [==[ResultTest.SupportsMoveOnlyValue]==] [==[ResultTest.VoidSuccessHasNoError]==] [==[ResultTest.VoidFailureStoresError]==] [==[RuntimeTest.ModuleWithoutDependenciesCanInitializeAndStart]==] [==[RuntimeTest.DependenciesInitializeAndStartBeforeDependent]==] [==[RuntimeTest.CircularDependencyIsRejected]==] [==[RuntimeTest.MissingDependencyIsRejected]==] [==[RuntimeTest.FailedStartRollsBackModulesAlreadyStarted]==] [==[RuntimeTest.StopUsesReverseDependencyOrder]==] [==[RuntimeTest.InvalidLifecycleStateIsRejected]==] [==[RuntimeTest.LifecycleTransitionContractAcceptsOnlyValidStates]==] [==[RuntimeTest.RuntimeContextProvidesNonOwningRuntimeServices]==] [==[RuntimeTest.DuplicateModuleIdIsRejected]==] [==[RuntimeTest.ExampleModuleFollowsCompleteLifecycle]==] [==[RuntimeTest.ExampleModuleUsesLoggerAndEventBusServices]==] [==[PluginLoaderTest.LoadsValidPluginAndOwnsModuleLifetime]==] [==[PluginLoaderTest.RejectsMissingPlugin]==] [==[PluginLoaderTest.RejectsIncompatibleApiVersion]==] [==[PluginLoaderTest.RejectsIncompatibleAbiVersion]==] [==[PluginLoaderTest.RegistersLoadedPluginWithModuleManager]==] [==[PluginLoaderTest.UnloadsPluginAfterStoppingItsModule]==] [==[CoreIntegrationTest.PublicTypesComposeWithoutUpperLayers]==] [==[LifetimeIntegrationTest.EventSubscriptionIsRemovedWhenModuleIsDestroyed]==] [==[LifetimeIntegrationTest.RuntimeStopUnloadsRegisteredPlugin]==] [==[ApplicationIntegrationTest.RunsAndReturnsApplicationExitCode]==] [==[ApplicationIntegrationTest.PropagatesConfigureFailure]==] [==[ResultStressTest.RepeatedValueAndErrorConstruction]==] [==[CoreSystemTest.CoreHeadersAreUsableTogether]==])
+set(framework_core_tests_TESTS [==[ErrorTest.PreservesCodeAndMessage]==] [==[ErrorTest.CapturesSourceLocation]==] [==[ResultTest.StoresValue]==] [==[ResultTest.StoresError]==] [==[ResultTest.SupportsMoveOnlyValue]==] [==[ResultTest.VoidSuccessHasNoError]==] [==[ResultTest.VoidFailureStoresError]==] [==[RuntimeTest.ModuleWithoutDependenciesCanInitializeAndStart]==] [==[RuntimeTest.DependenciesInitializeAndStartBeforeDependent]==] [==[RuntimeTest.CircularDependencyIsRejected]==] [==[RuntimeTest.MissingDependencyIsRejected]==] [==[RuntimeTest.FailedStartRollsBackModulesAlreadyStarted]==] [==[RuntimeTest.StopUsesReverseDependencyOrder]==] [==[RuntimeTest.InvalidLifecycleStateIsRejected]==] [==[RuntimeTest.LifecycleTransitionContractAcceptsOnlyValidStates]==] [==[RuntimeTest.RuntimeCanRestartAfterStop]==] [==[RuntimeTest.RuntimeContextProvidesNonOwningRuntimeServices]==] [==[RuntimeTest.DuplicateModuleIdIsRejected]==] [==[RuntimeTest.ExampleModuleFollowsCompleteLifecycle]==] [==[RuntimeTest.ExampleModuleUsesLoggerAndEventBusServices]==] [==[PluginLoaderTest.LoadsValidPluginAndOwnsModuleLifetime]==] [==[PluginLoaderTest.RejectsMissingPlugin]==] [==[PluginLoaderTest.RejectsIncompatibleApiVersion]==] [==[PluginLoaderTest.RejectsIncompatibleAbiVersion]==] [==[PluginLoaderTest.RegistersLoadedPluginWithModuleManager]==] [==[PluginLoaderTest.UnloadsPluginAfterStoppingItsModule]==] [==[CoreIntegrationTest.PublicTypesComposeWithoutUpperLayers]==] [==[LifetimeIntegrationTest.EventSubscriptionIsRemovedWhenModuleIsDestroyed]==] [==[LifetimeIntegrationTest.RuntimeStopUnloadsRegisteredPlugin]==] [==[ApplicationIntegrationTest.RunsAndReturnsApplicationExitCode]==] [==[ApplicationIntegrationTest.PropagatesConfigureFailure]==] [==[ResultStressTest.RepeatedValueAndErrorConstruction]==] [==[CoreSystemTest.CoreHeadersAreUsableTogether]==])

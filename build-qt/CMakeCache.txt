@@ -279,6 +279,9 @@ QT_ADDITIONAL_HOST_PACKAGES_PREFIX_PATH:STRING=
 //Additional directories where find(Qt6 ...) components are searched
 QT_ADDITIONAL_PACKAGES_PREFIX_PATH:STRING=
 
+//Path to a program.
+QT_DEPLOY_TOOL:FILEPATH=C:/Qt/6.11.2/msvc2022_64/bin/windeployqt.exe
+
 //The directory containing a CMake configuration file for Qt6Concurrent.
 Qt6Concurrent_DIR:PATH=C:/Qt/6.11.2/msvc2022_64/lib/cmake/Qt6Concurrent
 

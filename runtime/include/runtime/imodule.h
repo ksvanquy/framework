@@ -17,7 +17,8 @@ enum class ModuleState {
 };
 
 [[nodiscard]] constexpr bool canInitialize(ModuleState state) noexcept {
-    return state == ModuleState::Discovered || state == ModuleState::Loaded;
+    return state == ModuleState::Discovered || state == ModuleState::Loaded ||
+           state == ModuleState::Stopped;
 }
 
 [[nodiscard]] constexpr bool canStart(ModuleState state) noexcept {
