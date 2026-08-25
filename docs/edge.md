@@ -13,3 +13,24 @@ hiển thị lỗi và trạng thái runtime;
 tận dụng Qt Bridge/UI infrastructure có sẵn của framework.
 Ứng dụng không tự implement Edge TTS protocol bằng C++.
 Edge TTS được coi là một external capability được cung cấp bởi Python plugin.
+                
+
+                  Edge TTS Studio
+                       │
+                       ▼
+                TtsStudioModule
+                       │
+                       ▼
+              Plugin SDK / ABI
+                       │
+                       ▼
+              Edge TTS Plugin DLL
+                       │
+                       ▼
+              C++ Plugin Module
+                       │
+                       ▼
+             Python integration
+                       │
+                       ▼
+                   edge-tts
